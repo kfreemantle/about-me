@@ -1,7 +1,5 @@
-window.onload = function() {
-  let userName = prompt('What\'s your name, please?');
+let userName = prompt('What\'s your name, please?');
 console.log(userName);
-
 
 let userBackgroundTech = prompt('Let\'s get to know each other better.  Do you have a background in tech?', 'Yes/No').toLowerCase();
 console.log(userBackgroundTech);
