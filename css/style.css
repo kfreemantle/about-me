@@ -1,3 +1,33 @@
 body {
-  background-color: ;
+  color: #101820FF;
+  background-color: #f2aa4cff;
+  font-size: 100%;
+
+}
+
+h {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 2.5em;
+  
+}
+
+h3 {
+ font-size: 1.8em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.25em;
+}
+
+ul {
+  list-style-type:lower-greek;  
+  border: 2px;
+  border-color: darkslategray;
+  padding-left: 20px;
 }
