@@ -1,8 +1,11 @@
 'use strict';
 
+// The first question is a prompt for the user's name, stored in a userName variable.
+
 let userName = prompt('What\'s your name, please?');
 console.log(userName);
 
+// Question 2-6 are functionally identical, prompting the user with a yes/no question, converting it to lower case, storing the response in a userBackgroundX variable, 
 let userBackgroundTech = prompt('Let\'s get to know each other better.  Do you have a background in tech?', 'Yes/No').toLowerCase();
 console.log(userBackgroundTech);
 if (userBackgroundTech === 'yes') {
@@ -60,12 +63,15 @@ while(attemptedGuessesAge < maxGuessesAge){
 }
 
 
-// Array Guessing game logic
+// Array Guessing game logic.
+// Set a constant for the max guesses, and variables for our initial counters for correct guesses and attempted guesses.
+
 const maxGuessesGames = 6;
 
 let correctCount = 0;
-let attemptedGuessesGames = 0;  // Set a constant for the max guesses, and variables for our initial counters for correct guesses and attempted guesses.
+let attemptedGuessesGames = 0;  
 
+// Here I'm declaring a constant for my games list, which is unchanging as far as the user is concerned.
 const kyleGames = [
   `Dungeon's & Dragons`,
   `Fallout: New Vegas`,
@@ -77,11 +83,14 @@ const kyleGames = [
   `Azul`,
   `Thornwatch`,
   `Clank! Legacy`
-];   // declaring a constant for my games list, which is unchanging as far as the user is concerned.
+];   
 
+
+// this is a function declared to process the gameName to lower case. Because I may need more validation later so we're parking that processing in this function to make it easier later on.
 function processGameName(gameName){
-  return gameName.toLowerCase();
-};   // this is a function to process the gameName to lower case, but we may need more validation later so we're parking that processing in this function to make it easier later on.
+  return gameName.toLowerCase()
+  ;
+};   
 
 while (attemptedGuessesGames < maxGuessesGames){
   const userGuessGame = prompt("Can you guess of my favorite games?");
@@ -91,13 +100,13 @@ while (attemptedGuessesGames < maxGuessesGames){
   if (typeof userGuessGame === 'string'){
     const lowerGuess = processGameName(userGuessGame);
     let match = false;
-    // this if statement starts by checking to see if the data type is a string, like all the elements in the array are. If it is, the user guess is stored as a function lowerGuess, to show it's been processed.  The match variable is estableshed and set to false for now.
+    // this if statement starts by checking to see if the data type is a string, like all the elements in the array are. If it is, the user guess is stored as a function lowerGuess, to show it's been processed.  The match variable is estableshed and set to false for now. We're using it as a flag that the code is going to check against later.
 
     // This for functinon checks to see if the guess is in the array. index starts at zero, the condition runs as long as long as the current i is less than the total length of the array, and each iteration increments up by one.  If the processed guess in the lowerGuess function is strictly equal to the currentGame - which is any entry in the array - we set the match variable to true and then break.
     for (let i = 0; i < kyleGames.length; i++){
-      let currentGame = processGameName(kyleGames[i]);
+      let currentGame = processGameName(kyleGames[i]);  // the processGameName() function is run with the argument of kyleGames[i], which the function for every index iteration of the array.  Effectively, currentGame is the container that the processGameName function uses to inspect each element of the kyleGames array.
 
-      if(lowerGuess === currentGame){
+      if(lowerGuess === currentGame){  // This is the if statement that ultimately checks the processed guess against the 
         match = true;
         break;
       }
