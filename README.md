@@ -19,7 +19,7 @@ I am building a webpage about myself, **Kyle Freemantle**, a student at **Code F
 
 ### Lighthouse Accessibility Report Score
 
-![lab02-lighthouse-report](lab02lighthouse.png).
+![lab02-lighthouse-report](img/lab02lighthouse.png).
 
 ### Reflections and Comments
 
