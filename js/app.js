@@ -1,7 +1,11 @@
 'use strict';
 
-let userName = prompt('What\'s your name, please?');
-console.log(userName);
+function getUserName() {
+ let userName= prompt('What\'s your name, please?');
+  console.log(userName);
+  return userName;
+}
+let userName= getUserName();
 
 let userBackgroundTech = prompt('Let\'s get to know each other better.  Do you have a background in tech?', 'Yes/No').toLowerCase();
 console.log(userBackgroundTech);
