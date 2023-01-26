@@ -27,11 +27,15 @@ function getUserBackgroundMilitary() {
 }
 getUserBackgroundMilitary();
 
-let userCollege = prompt('And did you go to college or a trade school?', 'Yes/No').toLowerCase();
-console.log(userCollege);
-if (userCollege === 'yes') {
-  alert('I hope it was valuable for you! I studied finance and economics at Western Washington University.');
-} else alert('I did, but barely. I often struggled in college.');
+function didUserCollege() {
+  let userCollege = prompt('And did you go to college or a trade school?', 'Yes/No').toLowerCase();
+  console.log(userCollege);
+  if (userCollege === 'yes') {
+    alert('I hope it was valuable for you! I studied finance and economics at Western Washington University.');
+  } else alert('I did, but barely. I often struggled in college.');
+}
+didUserCollege();
+
 
 let userLiveSeattle = prompt('Do you currently live in Seattle?', 'Yes/No').toLowerCase();
 console.log(userLiveSeattle);
