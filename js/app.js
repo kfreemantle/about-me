@@ -1,7 +1,7 @@
 'use strict';
 
 function getUserName() {
-  let userName= prompt('What\'s your name, please?');
+  let userName = prompt('What\'s your name, please?');
   console.log(userName);
   return userName;
 }
@@ -18,11 +18,14 @@ function getUserBackgroundTech() {
 }
 getUserBackgroundTech();
 
-let userBackgroundMilitary = prompt('Have you served in the military?', 'Yes/No').toLowerCase();
-console.log(userBackgroundMilitary);
-if (userBackgroundMilitary === 'yes') {
-  alert('Very cool! I was in the Marine Corps before I was in IT.');
-} else alert('Love it. I got lost on the way to college and wound up in the Marines.');
+function getUserBackgroundMilitary() {
+  let userBackgroundMilitary= prompt('Have you served in the military?', 'Yes/No').toLowerCase();
+  console.log(userBackgroundMilitary);
+  if (userBackgroundMilitary === 'yes') {
+    alert('Very cool! I was in the Marine Corps before I was in IT.');
+  } else alert('Love it. I got lost on the way to college and wound up in the Marines.');
+}
+getUserBackgroundMilitary();
 
 let userCollege = prompt('And did you go to college or a trade school?', 'Yes/No').toLowerCase();
 console.log(userCollege);
