@@ -45,14 +45,14 @@ function doesUserLiveSeattle() {
 }
 doesUserLiveSeattle();
 
-//function doesUserWorkSeattle() {
+function doesUserWorkSeattle() {
   let userWorkSeattle = prompt('If you worked in tech, would you like to work in the Seattle area?', 'Yes/No').toLowerCase();
   console.log(userWorkSeattle);
   if (userWorkSeattle === 'yes') {
     alert(`It can be a fun place to work, ${userName}! I've worked downtown for several years.`);
   } else alert(`Truthfully ${userName}, I would like to try living somewhere else myself.`);
-//}
-//doesUserWorkSeattle();
+}
+doesUserWorkSeattle();
 
 
 
