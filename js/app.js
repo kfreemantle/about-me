@@ -47,10 +47,13 @@ while(attemptedGuessesAge < maxGuessesAge){
 
   if (userGuessAge < kyleAge){
     guessMessageAge = `That's too low! Guess again.`;
+    console.log(userGuessAge);
   } else if (userGuessAge > kyleAge){
     guessMessageAge = 'Too High! Guess Again';
+    console.log(userGuessAge);
   } else if (userGuessAge === kyleAge) {
     alert(`Correct! You guessed my age in ${attemptedGuessesAge} attempt(s)`);
+    console.log(attemptedGuessesAge)
     break;
 
   }  // These if..else statements check the users's guess against the constant of my age. Too low, message says so, move to next condition. If guess is too high, message says so, moves to next condition. If the user guess strictly equals my age, we return an alert that the user got it right and we stop the code with a break.
@@ -82,13 +85,15 @@ function processGameName(gameName){
 
 while (attemptedGuessesGames < maxGuessesGames){
   const userGuessGame = prompt("Can you guess of my favorite games?");
-  attemptedGuessesGames++;   // the while loop runs as long as our attempted guesses is less than our max guesses.  It prompts the user for a guess, and stores the result a
+  console.log(userGuessGame);
+  attemptedGuessesGames++;   // the while loop runs as long as our attempted guesses is less than our max guesses.  It prompts the user for a guess, and stores the result under a userGuessGame variable, and increments the attempted guesses up by one.
 
   if (typeof userGuessGame === 'string'){
     const lowerGuess = processGameName(userGuessGame);
     let match = false;
+    // this if statement starts by checking to see if the data type is a string, like all the elements in the array are. If it is, the user guess is stored as a function lowerGuess, to show it's been processed.  The match variable is estableshed and set to false for now.
 
-    // check to see if it's in the array
+    // This for functinon checks to see if the guess is in the array. index starts at zero, the condition runs as long as long as the current i is less than the total length of the array, and each iteration increments up by one.  If the processed guess in the lowerGuess function is strictly equal to the currentGame - which is any entry in the array - we set the match variable to true and then break.
     for (let i = 0; i < kyleGames.length; i++){
       let currentGame = processGameName(kyleGames[i]);
 
@@ -98,12 +103,13 @@ while (attemptedGuessesGames < maxGuessesGames){
       }
     }
 
-    // we know if you were right or wrong
+    // if the match variable is set to true, the correct count iterates up by one. We go back to the top of the while loop, which will run again until the max guesses is reached.
     if (match){
       correctCount++;
     }
   }
 }
 
-alert(`You guessed ${correctCount} guesses correct. Nicely done!`);
+alert(`You guessed ${correctCount} guesses correct. Nicely done!`);// finally, we return a message with a report of the correctCount variable.
+console.log(correctCount);
 
