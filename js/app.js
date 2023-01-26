@@ -1,17 +1,22 @@
 'use strict';
 
 function getUserName() {
- let userName= prompt('What\'s your name, please?');
+  let userName= prompt('What\'s your name, please?');
   console.log(userName);
   return userName;
 }
 let userName= getUserName();
+// let userName= getUserName() allows userName to be used later in the code.
 
-let userBackgroundTech = prompt('Let\'s get to know each other better.  Do you have a background in tech?', 'Yes/No').toLowerCase();
-console.log(userBackgroundTech);
-if (userBackgroundTech === 'yes') {
-  alert('Excellent! Me too, at least adjacently. I came from healthcare IT.');
-} else  alert('That\'s OK, we can learn together.');
+// eslint-disable-next-line no-unused-vars
+function getUserBackgroundTech() {
+  let userBackgroundTech = prompt('Let\'s get to know each other better.  Do you have a background in tech?', 'Yes/No').toLowerCase();
+  console.log(userBackgroundTech);
+  if (userBackgroundTech === 'yes') {
+    alert('Excellent! Me too, at least adjacently. I came from healthcare IT.');
+  } else alert('That\'s OK, we can learn together.');
+}
+getUserBackgroundTech();
 
 let userBackgroundMilitary = prompt('Have you served in the military?', 'Yes/No').toLowerCase();
 console.log(userBackgroundMilitary);
