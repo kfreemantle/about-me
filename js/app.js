@@ -9,7 +9,6 @@ function getUserName() {
   return userName;
 }
 
-// eslint-disable-next-line no-unused-vars
 function getUserBackgroundTech() {
   let userBackgroundTech = prompt('Let\'s get to know each other better.  Do you have a background in tech?', 'Yes/No').toLowerCase();
   console.log(userBackgroundTech);
@@ -18,7 +17,7 @@ function getUserBackgroundTech() {
   } else alert('That\'s OK, we can learn together.');
 }
 getUserBackgroundTech();
-// this command runs the funcion. without this, nothing would show up.
+// this command runs the function. without this, nothing would show up.
 
 function getUserBackgroundMilitary() {
   let userBackgroundMilitary= prompt('Have you served in the military?', 'Yes/No').toLowerCase();
@@ -87,7 +86,7 @@ function guessAge(){
     console.log(attemptedGuessesAge);
 
 
-    
+
   } // These if..else statements check the users's guess against the constant of my age. Too low, message says so, move to next condition. If guess is too high, message says so, moves to next condition. If the user guess strictly equals my age, we return an alert that the user got it right and we stop the code with a break.
 }
 

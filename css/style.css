@@ -1,17 +1,22 @@
 body {
-  color: #101820FF;
-  background-color: #f2aa4cff;
+  color: #2F3E46;
+  background-color: #CAD2C5;
   font-size: 100%;
 
 }
 
 h {
+  color: #52796F;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
   font-size: 2.5em;
   
+}
+
+h2 {
+  font-style: italic;
 }
 
 h3 {
@@ -27,7 +32,10 @@ h5 {
 
 ul {
   list-style-type:lower-greek;  
-  border: 2px;
-  border-color: darkslategray;
+  border-color: #354F52;
   padding-left: 20px;
+}
+
+li:hover {
+  font-weight: bolder;
 }
